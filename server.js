@@ -10,7 +10,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Connexion à MongoDB
-mongoose.connect('mongodb+srv://juniorlk:juniorlk@clusterjamboinfo.5pwdk22.mongodb.net/?retryWrites=true&w=majority&appName=ClusterJamboInfo', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://juniorlk:juniorlk@clusterjamboinfo.5pwdk22.mongodb.net/students?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
